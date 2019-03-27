@@ -8,16 +8,19 @@
     "markdown-it-attrs": "^2.3.1",
     "markdown-it-checkbox": "^1.1.0",
     "netlify-identity-widget": "^1.4.14",
-    "vuepress": "^0.14.8"
+    "vuepress": "^1.0.0-alpha.44"
   },
   "scripts": {
+    "remove-prism": "sed -i.bak -e \":a\" -e 'N' -e '$!ba' -e \"s/<style src=\\\"prismjs.*css\\\"><\\/style>/ /\" node_modules/@vuepress/theme-default/layouts/Layout.vue",
     "docs:generate-api": "cd docs && python generate_docs.py",
-    "docs:dev": "yarn docs:generate-api && vuepress dev docs",
+    "docs:dev": "vuepress dev docs",
     "docs:build": "yarn docs:generate-api && vuepress build docs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PrefectHQ/prefect.git"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.44"
+  }
 }

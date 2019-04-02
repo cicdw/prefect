@@ -102,7 +102,7 @@ You can now use your favorite debugger to drop into the traceback and proceed as
 Note that this utility doesn't require you know anything about where the error occurred.
 :::
 
-### Re-raising Execeptions post-hoc
+### Re-raising Exceptions post-hoc
 
 Suppose you want to let the full pipeline run and don't want to raise the trapped error at runtime. Assuming your error was trapped and placed in a `Failed` state, the full exception is stored in the `result` attribute of the task state. Knowing this, you can re-raise it locally and debug from there!
 

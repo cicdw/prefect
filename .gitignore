@@ -113,7 +113,10 @@ ENV/
 
 # VuePress
 node_modules
-#
+
+# Yarn
+yarn-error.log
+
 # Mac OS
 .DS_Store
 
